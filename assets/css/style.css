@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+:root {
+  --header-bg: rgba(255,255,255,0.2);
+  --button-bg: rgba(255,255,255,0.2);
+  --body-bg: rgba(255,255,255,0.3);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.html {
+  font-family: "Yesteryear", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  color: #fff;
+  user-select: none;
+}
+
+#bg {
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+}
+#bg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  filter: blur(6px);
+}
+
+.hold {
+  border: solid 5px #ccc;
+}
+
+.hovered {
+  background: #f4f4f4;
+  border-style: dashed !important;
+}
+
+.dd-box {
+  z-index: 1;
+}
+
+.boxs {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.box {
+  display: inline-block;
+  height: 160px;
+  width: 160px;
+  margin: 10px;
+  border: solid 3px salmon;
+  background: white;
+}
+
+.fill {
+  background: no-repeat center center;
+  background-size: cover;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  top: 3px;
+  left: 3px;
+  cursor: pointer;
+}
+
+/* BREAKPOINT */
+#app {
+  overflow: hidden;
+}
+
+@media (min-width: 1089px) {
+  .hidden-on-XL {
+    display: none;
+  }
+}
+@media (min-width: 931px) and (max-width: 1088px) {
+  .hidden-on-L {
+    display: none;
+  }
+}
+@media (max-width: 1088px) {
+  .hidden-on-lte-L {
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 930px) {
+  .hidden-on-M {
+    display: none;
+  }
+}
+@media (min-width: 701px) and (max-width: 768px) {
+  .hidden-on-S {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .hidden-on-lte-S {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  #Pea-clock {
+    font-size: 40px;
+  }
+
+  .calculator {
+    width: 80vw;
+  }
+
+  .calculator-body .btn-box {
+    grid-template-rows: repeat(5, 70px);
+  }
+}
+@media (max-width: 480px) {
+  .hidden-on-XXS {
+    display: none;
+  }
+}
+@media (max-width: 335px) {
+  .hidden-on-XXXS {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
